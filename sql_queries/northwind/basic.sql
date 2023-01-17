@@ -16,8 +16,20 @@ from employees e ;
 select count(*) region 
 from employees e ;
 
+select first_name ,region 
+from employees e 
+where region is null;
 
 
+select country, count(*)
+from suppliers s 
+group by country 
+order by count(*) desc;
 
 
-
+select ship_country, sum(freight)
+from orders o 
+where ship_region is not null
+group by ship_country 
+having sum(freight) > 2750
+order by sum(freight);
