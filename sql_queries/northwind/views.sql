@@ -19,3 +19,25 @@ where unit_price > 20;
 
 
 drop view if exists products_suppliers_categories;
+
+
+
+--=======================
+
+
+create view heavy_orders as
+select *
+from orders o 
+where freight > 50;
+
+
+select *
+from heavy_orders ho 
+order by freight ;
+
+
+create or replace view heavy_orders as
+select *
+from orders o 
+where freight > 100;
+
