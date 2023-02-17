@@ -1,3 +1,1 @@
-"# sql_queries"
-
-database query optimization
+Database query optimization
